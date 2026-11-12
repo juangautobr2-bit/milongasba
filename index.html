@@ -16,11 +16,11 @@
         :root {
             --bg-main: #fcfcfc;
             --bg-card: #ffffff;
-            --text-main: #FFFFFF;
+            --text-main: #0f172a;
             --text-muted: #64748b;
             --border-color: #e2e8f0;
-            --accent: #2563eb;
-            --accent-hover: #2563eb;
+            --accent: #8b263e;
+            --accent-hover: #701d31;
             --pill-bg: #f1f5f9;
             --pill-text: #334155;
             --shadow: 0 1px 3px rgba(0,0,0,0.05);
@@ -29,11 +29,11 @@
         .dark {
             --bg-main: #0b0d11;
             --bg-card: #151921;
-            --text-main: #FFFFFF;
+            --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --border-color: #262d3d;
-            --accent: #2563eb;
-            --accent-hover: #2563eb;
+            --accent: #b83250;
+            --accent-hover: #d63d60;
             --pill-bg: #1e2532;
             --pill-text: #cbd5e1;
             --shadow: 0 1px 3px rgba(0,0,0,0.3);
@@ -119,7 +119,7 @@
 
         .btn-primary {
             background-color: var(--accent);
-            color: #2563eb;
+            color: #ffffff;
             border: none;
             padding: 0.5rem 1rem;
             border-radius: 6px;
@@ -146,7 +146,7 @@
 
         .date-banner {
             text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             padding: 1.5rem;
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -166,34 +166,6 @@
         .date-banner p {
             font-size: 0.85rem;
             color: var(--text-muted);
-        }
-
-        /* Selector de Vista Pública: Cartelera vs Galería de Flyers */
-        .view-switcher {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-bottom: 1.75rem;
-        }
-
-        .switch-btn {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            color: var(--text-muted);
-            padding: 0.6rem 1.25rem;
-            border-radius: 6px;
-            font-size: 0.82rem;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .switch-btn.active {
-            border-color: var(--accent);
-            background: var(--accent);
-            color: #2563eb;
         }
 
         .controls-section {
@@ -232,7 +204,7 @@
 
         .pill-day.active {
             background: var(--accent);
-            color: #2563eb;
+            color: #ffffff;
             border-color: var(--accent);
         }
 
@@ -290,7 +262,6 @@
             font-size: 0.9rem;
         }
 
-        /* Grid estándar de Cartelera */
         .milongas-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -412,86 +383,6 @@
             color: var(--accent);
         }
 
-        /* Grid Visual de Flyers / Fotos */
-        .flyers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .flyer-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .flyer-img-container {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 4 / 5;
-            background: var(--pill-bg);
-            overflow: hidden;
-            cursor: pointer;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .flyer-img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .flyer-card:hover .flyer-img-container img {
-            transform: scale(1.03);
-        }
-
-        .flyer-day-badge {
-            position: absolute;
-            top: 0.75rem;
-            right: 0.75rem;
-            background: var(--accent);
-            color: #2563eb;
-            font-size: 0.7rem;
-            font-weight: 700;
-            padding: 0.25rem 0.6rem;
-            border-radius: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-        }
-
-        .flyer-info {
-            padding: 1rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.4rem;
-            flex: 1;
-        }
-
-        .flyer-info h4 {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--text-main);
-        }
-
-        .flyer-meta {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .flyer-meta i {
-            color: var(--accent);
-            width: 14px;
-            text-align: center;
-        }
-
         .empty-state {
             grid-column: 1 / -1;
             text-align: center;
@@ -503,36 +394,6 @@
             border-radius: 8px;
         }
 
-        /* File Upload Box */
-        .file-upload-box {
-            border: 1px dashed var(--accent);
-            background: var(--pill-bg);
-            padding: 1rem;
-            border-radius: 6px;
-            text-align: center;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .file-upload-box input[type="file"] {
-            position: absolute;
-            inset: 0;
-            opacity: 0;
-            cursor: pointer;
-            width: 100%;
-            height: 100%;
-        }
-
-        .preview-flyer {
-            max-height: 180px;
-            border-radius: 6px;
-            margin-top: 0.75rem;
-            border: 1px solid var(--border-color);
-            display: none;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
         /* Modal Styles */
         .modal-overlay {
             position: fixed;
@@ -540,7 +401,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.75);
+            background: rgba(0,0,0,0.6);
             backdrop-filter: blur(2px);
             z-index: 1000;
             display: none;
@@ -642,7 +503,6 @@
             margin-bottom: 1.5rem;
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 0.75rem;
-            flex-wrap: wrap;
         }
 
         .tab-btn {
@@ -695,46 +555,28 @@
         <div id="publicView">
             <div class="date-banner">
                 <h2 id="currentBannerDate">HOY DÍA JUEVES 12 DE NOVIEMBRE DE 2026</h2>
-                <p>Agenda semanal de milongas de Buenos Aires &bull; Cartelera y Galería de Flyers</p>
+                <p>Seleccioná un día y descubrí la agenda de milongas de Buenos Aires (Sincronizado en Supabase Cloud)</p>
             </div>
 
-            <!-- SELECTOR DE MODO DE VISUALIZACIÓN -->
-            <div class="view-switcher">
-                <button class="switch-btn active" id="btnModeList" onclick="setPublicDisplayMode('list')">
-                    <i class="fa-solid fa-list-ul"></i> Cartelera por Día
-                </button>
-                <button class="switch-btn" id="btnModeFlyers" onclick="setPublicDisplayMode('flyers')">
-                    <i class="fa-solid fa-images"></i> Galería de Flyers (Grid Visual)
-                </button>
+            <div class="controls-section">
+                <div class="days-pills" id="daysPillsContainer">
+                    <!-- Generado dinámicamente -->
+                </div>
+                <div class="filter-pills">
+                    <button class="pill-filter active" onclick="setFilter('tipo', 'todos')">Todas</button>
+                    <button class="pill-filter" onclick="setFilter('tipo', 'A la gorra')">A la gorra</button>
+                    <button class="pill-filter" onclick="setFilter('tipo', 'Con entrada')">Con entrada</button>
+                    <button class="pill-filter" onclick="setFilter('tipo', 'orquesta')">Con Orquesta/Show</button>
+                </div>
             </div>
 
-            <!-- MODO 1: CARTELERA POR DÍA -->
-            <div id="listModeContainer">
-                <div class="controls-section">
-                    <div class="days-pills" id="daysPillsContainer"></div>
-                    <div class="filter-pills">
-                        <button class="pill-filter active" onclick="setFilter('tipo', 'todos')">Todas</button>
-                        <button class="pill-filter" onclick="setFilter('tipo', 'A la gorra')">A la gorra</button>
-                        <button class="pill-filter" onclick="setFilter('tipo', 'Con entrada')">Con entrada</button>
-                        <button class="pill-filter" onclick="setFilter('tipo', 'orquesta')">Con Orquesta/Show</button>
-                    </div>
-                </div>
-
-                <div class="search-bar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" id="searchInput" placeholder="Buscar por milonga, salón, organizador, artista u orquesta..." oninput="renderMilongas()">
-                </div>
-
-                <div class="milongas-grid" id="milongasGrid"></div>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Buscar por milonga, salón, organizador, artista u orquesta..." oninput="renderMilongas()">
             </div>
 
-            <!-- MODO 2: GRID VISUAL DE FLYERS / FOTOS -->
-            <div id="flyersModeContainer" style="display: none;">
-                <div class="search-bar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" id="searchFlyerInput" placeholder="Filtrar flyers por nombre de milonga, día o salón..." oninput="renderFlyersGrid()">
-                </div>
-                <div class="flyers-grid" id="flyersGrid"></div>
+            <div class="milongas-grid" id="milongasGrid">
+                <!-- Tarjetas de milongas -->
             </div>
         </div>
 
@@ -743,14 +585,14 @@
             <div class="admin-nav">
                 <button class="tab-btn active" id="tabMilongas" onclick="switchAdminTab('milongas')">Mis Milongas / Eventos</button>
                 <button class="tab-btn" id="tabNew" onclick="switchAdminTab('new')">+ Cargar Milonga</button>
-                <button class="tab-btn" id="tabUsers" onclick="switchAdminTab('users')" style="display:none;">Gestión Usuarios</button>
+                <button class="tab-btn" id="tabUsers" onclick="switchAdminTab('users')" style="display:none;" id="usersTabBtn">Gestión Usuarios</button>
                 <button class="tab-btn" onclick="logout()" style="margin-left: auto; color: var(--accent);">Cerrar Sesión</button>
             </div>
 
             <!-- SECCION MILONGAS -->
             <div id="sectionMilongas">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                    <h3 id="dashboardTitle" style="font-size: 1rem; font-weight: 700;">Gestión de Eventos</h3>
+                    <h3 id="dashboardTitle" style="font-size: 1rem; font-weight: 700;">Gestión de Eventos en Supabase</h3>
                     <button class="btn-primary" onclick="switchAdminTab('new')"><i class="fa-solid fa-plus"></i> Nueva Milonga</button>
                 </div>
                 <div class="milongas-grid" id="adminMilongasGrid"></div>
@@ -762,20 +604,6 @@
                     <h3 id="formTitle" style="margin-bottom: 1.25rem; font-size: 1rem; font-weight: 700;">Cargar Nueva Milonga</h3>
                     <form id="milongaForm" onsubmit="saveMilonga(event)">
                         <input type="hidden" id="editMilongaId">
-                        <input type="hidden" id="mFlyerBase64">
-
-                        <!-- SUBIDA DE FLYER / FOTO -->
-                        <div class="form-group">
-                            <label><i class="fa-solid fa-image"></i> Foto o Flyer de la Milonga (Se mostrará en la Galería Visual)</label>
-                            <div class="file-upload-box">
-                                <i class="fa-solid fa-cloud-arrow-up" style="font-size: 1.5rem; color: var(--accent); margin-bottom: 0.4rem;"></i>
-                                <p style="font-size: 0.8rem; font-weight: 600;">Haz clic o arrastra aquí la imagen del flyer (JPG, PNG, WEBP)</p>
-                                <span style="font-size: 0.72rem; color: var(--text-muted);">Se optimizará automáticamente para carga rápida</span>
-                                <input type="file" id="mFlyerInput" accept="image/*" onchange="handleFlyerUpload(event)">
-                                <img id="flyerPreview" class="preview-flyer" alt="Vista previa del flyer">
-                            </div>
-                        </div>
-
                         <div class="form-row">
                             <div class="form-group">
                                 <label><i class="fa-solid fa-compact-disc"></i> Nombre de la Milonga</label>
@@ -827,8 +655,6 @@
                                 <select id="mTipoPrecio" class="form-control" onchange="togglePrecioInput()" required>
                                     <option value="A la gorra">A la gorra</option>
                                     <option value="Con entrada">Con entrada</option>
-                                    <option value="Entrada Libre y Gratuita">Entrada Libre y Gratuita</option>
-                                    <option value="Con Entrada Sugerida">Con Entrada Sugerida</option>
                                 </select>
                             </div>
                         </div>
@@ -851,7 +677,7 @@
 
                         <div class="modal-footer">
                             <button type="button" class="btn-secondary" onclick="switchAdminTab('milongas')">Cancelar</button>
-                            <button type="submit" class="btn-primary"><i class="fa-solid fa-floppy-disk"></i> Guardar Milonga</button>
+                            <button type="submit" class="btn-primary"><i class="fa-solid fa-floppy-disk"></i> Guardar en Supabase</button>
                         </div>
                     </form>
                 </div>
@@ -860,24 +686,13 @@
             <!-- SECCION USUARIOS (SOLO ADMIN GLOBAL) -->
             <div id="sectionUsers" style="display: none;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                    <h3 style="font-size: 1rem; font-weight: 700;">Gestión de Organizadores</h3>
+                    <h3 style="font-size: 1rem; font-weight: 700;">Gestión de Organizadores en Supabase</h3>
                     <button class="btn-primary" onclick="openUserModal()"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</button>
                 </div>
                 <div id="usersListContainer" style="display: flex; flex-direction: column; gap: 0.75rem;"></div>
             </div>
         </div>
     </main>
-
-    <!-- MODAL DETALLE DE FLYER AMPLIADO -->
-    <div class="modal-overlay" id="flyerDetailModal">
-        <div class="modal-card" style="max-width: 600px;">
-            <div class="modal-header">
-                <h3 id="modalFlyerTitle">Detalle de la Milonga</h3>
-                <button class="btn-action-sm" onclick="closeFlyerModal()"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <div id="modalFlyerBody"></div>
-        </div>
-    </div>
 
     <!-- MODAL LOGIN UNIFICADO -->
     <div class="modal-overlay" id="loginModal">
@@ -940,18 +755,16 @@
 
     <!-- Supabase SDK e Inicialización -->
     <script type="module">
+        // 1. TUS CREDENCIALES DE SUPABASE
         const SUPABASE_URL = "https://ccamfdmhzlbekzuzunpn.supabase.co";
-        const SUPABASE_ANON_KEY = "sb_publishable_i7y7fxAdSLk9SVGvwR61WA_sC9GSkXp";
+        const SUPABASE_ANON_KEY = "PEGA_AQUI_TU_ANON_PUBLIC_KEY";
 
+        // Inicializar cliente de Supabase
         const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
         window.supabaseClient = supabase;
 
         window.milongas = [];
-        // Usuarios por defecto de respaldo en caso de que la tabla en la nube esté vacía o bloqueada por RLS
-        window.users = [
-            { username: 'admin', pass: 'admin2026', role: 'admin' },
-            { username: 'malena', pass: 'tango2026', role: 'organizer' }
-        ];
+        window.users = [];
         window.currentUser = JSON.parse(localStorage.getItem('tango_current_user')) || null;
         window.activeDay = 'Jueves';
         window.activeFilter = 'todos';
@@ -959,26 +772,22 @@
 
         async function initSupabaseData() {
             try {
+                // Cargar Milongas desde Supabase
                 const { data: milongasData, error: mError } = await supabase.from('milongas').select('*');
-                if (mError) {
-                    console.warn("Aviso al cargar milongas:", mError.message);
-                } else if (milongasData && milongasData.length > 0) {
-                    window.milongas = milongasData;
-                }
+                if (mError) throw mError;
+                window.milongas = milongasData || [];
 
+                // Cargar Usuarios desde Supabase
                 const { data: usersData, error: uError } = await supabase.from('users').select('*');
-                if (uError) {
-                    console.warn("Aviso al cargar usuarios (usando respaldo local):", uError.message);
-                } else if (usersData && usersData.length > 0) {
-                    window.users = usersData;
-                }
+                if (uError) throw uError;
+                window.users = usersData || [];
+
             } catch (e) {
-                console.error("Error general de conexión con Supabase:", e.message);
+                console.error("Error al conectar con Supabase:", e.message);
             }
 
             renderDaysPills();
             renderMilongas();
-            renderFlyersGrid();
             updateAuthUI();
         }
 
@@ -987,132 +796,7 @@
     </script>
 
     <script>
-        // Cambio de vista pública entre Listado por Día y Grid de Flyers
-        function setPublicDisplayMode(mode) {
-            const listDiv = document.getElementById('listModeContainer');
-            const flyersDiv = document.getElementById('flyersModeContainer');
-            const btnList = document.getElementById('btnModeList');
-            const btnFlyers = document.getElementById('btnModeFlyers');
-
-            if (mode === 'list') {
-                listDiv.style.display = 'block';
-                flyersDiv.style.display = 'none';
-                btnList.classList.add('active');
-                btnFlyers.classList.remove('active');
-                renderMilongas();
-            } else {
-                listDiv.style.display = 'none';
-                flyersDiv.style.display = 'block';
-                btnList.classList.remove('active');
-                btnFlyers.classList.add('active');
-                renderFlyersGrid();
-            }
-        }
-
-        // Procesar imagen subida y comprimirla ligeramente para guardarla como DataURL (Base64)
-        function handleFlyerUpload(event) {
-            const file = event.target.files[0];
-            if (!file) return;
-
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const img = new Image();
-                img.onload = function() {
-                    const canvas = document.createElement('canvas');
-                    const MAX_WIDTH = 700;
-                    const scale = Math.min(1, MAX_WIDTH / img.width);
-                    canvas.width = img.width * scale;
-                    canvas.height = img.height * scale;
-
-                    const ctx = canvas.getContext('2d');
-                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-                    const compressedBase64 = canvas.toDataURL('image/jpeg', 0.8);
-
-                    document.getElementById('mFlyerBase64').value = compressedBase64;
-                    const preview = document.getElementById('flyerPreview');
-                    preview.src = compressedBase64;
-                    preview.style.display = 'block';
-                };
-                img.src = e.target.result;
-            };
-            reader.readAsDataURL(file);
-        }
-
-        // Renderizar Grid Visual de Flyers
-        function renderFlyersGrid() {
-            const grid = document.getElementById('flyersGrid');
-            if (!grid) return;
-
-            const query = (document.getElementById('searchFlyerInput')?.value || '').toLowerCase();
-            // Filtrar milongas que tengan flyer o mostrar todas con imagen de respaldo
-            let items = milongas.filter(m => {
-                const matchText = !query || 
-                    m.nombre.toLowerCase().includes(query) || 
-                    m.dia.toLowerCase().includes(query) || 
-                    m.salon.toLowerCase().includes(query);
-                return matchText;
-            });
-
-            if (items.length === 0) {
-                grid.innerHTML = `<div class="empty-state"><i class="fa-solid fa-images" style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--accent);"></i><p>No se encontraron flyers cargados con ese criterio.</p></div>`;
-                return;
-            }
-
-            grid.innerHTML = items.map(m => {
-                const imgSrc = m.flyer_url || 'https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?auto=format&fit=crop&w=600&q=80';
-                return `
-                    <div class="flyer-card">
-                        <div class="flyer-img-container" onclick="openFlyerDetail('${m.id}')">
-                            <span class="flyer-day-badge">${m.dia}</span>
-                            <img src="${imgSrc}" alt="${m.nombre}">
-                        </div>
-                        <div class="flyer-info">
-                            <h4>${m.nombre}</h4>
-                            <div class="flyer-meta"><i class="fa-solid fa-building"></i> <span>${m.salon}</span></div>
-                            <div class="flyer-meta"><i class="fa-solid fa-clock"></i> <span>${m.milonga}</span></div>
-                            <div class="flyer-meta"><i class="fa-solid fa-location-dot"></i> <span>${m.direccion}</span></div>
-                            <div class="card-footer" style="margin-top: 0.5rem; padding-top: 0.5rem;">
-                                <span class="badge-price">${m.tipo}</span>
-                                <div class="action-btns">
-                                    <button class="btn-action-sm" onclick="openFlyerDetail('${m.id}')" title="Ver ficha completa"><i class="fa-solid fa-expand"></i></button>
-                                    <button class="btn-action-sm" onclick="shareMilonga('${m.id}')" title="Compartir"><i class="fa-solid fa-share-nodes"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        function openFlyerDetail(id) {
-            const m = milongas.find(x => x.id === id);
-            if (!m) return;
-            const imgSrc = m.flyer_url || 'https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?auto=format&fit=crop&w=600&q=80';
-            document.getElementById('modalFlyerTitle').innerText = `${m.nombre} (${m.dia})`;
-            document.getElementById('modalFlyerBody').innerHTML = `
-                <div style="text-align: center; margin-bottom: 1rem;">
-                    <img src="${imgSrc}" style="max-width: 100%; max-height: 420px; border-radius: 6px; border: 1px solid var(--border-color);">
-                </div>
-                <div class="card-details">
-                    <div class="detail-row"><i class="fa-solid fa-building"></i> <span><strong>Salón:</strong> ${m.salon}</span></div>
-                    <div class="detail-row"><i class="fa-solid fa-graduation-cap"></i> <span><strong>Clase:</strong> ${m.clase || 'Sin clase previa'}</span></div>
-                    <div class="detail-row"><i class="fa-solid fa-music"></i> <span><strong>Milonga:</strong> ${m.milonga}</span></div>
-                    ${m.artista ? `<div class="detail-row"><i class="fa-solid fa-drum"></i> <span><strong>Artista/Orquesta:</strong> ${m.artista}</span></div>` : ''}
-                    <div class="detail-row"><i class="fa-solid fa-ticket"></i> <span><strong>Entrada:</strong> ${m.tipo} (${m.precio})</span></div>
-                    <div class="detail-row"><i class="fa-solid fa-users"></i> <span><strong>Organiza:</strong> ${m.organizador}</span></div>
-                    <div class="detail-row"><i class="fa-solid fa-location-dot"></i> <span>${m.direccion}</span></div>
-                </div>
-                <div class="modal-footer">
-                    <a href="${m.map_link || m.mapLink}" target="_blank" class="btn-primary"><i class="fa-solid fa-map-location-dot"></i> Abrir en Google Maps</a>
-                </div>
-            `;
-            document.getElementById('flyerDetailModal').classList.add('active');
-        }
-
-        function closeFlyerModal() {
-            document.getElementById('flyerDetailModal').classList.remove('active');
-        }
-
+        // Funciones de la Interfaz y Lógica
         function toggleTheme() {
             const current = document.documentElement.className;
             const next = current === 'light' ? 'dark' : 'light';
@@ -1201,7 +885,6 @@
                     <div class="card-footer">
                         <a href="${m.map_link || m.mapLink}" target="_blank" class="map-link"><i class="fa-solid fa-map-location-dot"></i> Ver en Google Maps</a>
                         <div class="action-btns">
-                            ${m.flyer_url ? `<button class="btn-action-sm" onclick="openFlyerDetail('${m.id}')" title="Ver Flyer"><i class="fa-solid fa-image"></i></button>` : ''}
                             <button class="btn-action-sm" onclick="shareMilonga('${m.id}')" title="Compartir"><i class="fa-solid fa-share-nodes"></i></button>
                         </div>
                     </div>
@@ -1261,7 +944,6 @@
                 document.getElementById('publicView').style.display = 'block';
                 document.getElementById('dashboardView').style.display = 'none';
                 renderMilongas();
-                renderFlyersGrid();
             } else {
                 if (!currentUser) {
                     openLoginModal();
@@ -1270,7 +952,7 @@
                 document.getElementById('publicView').style.display = 'none';
                 document.getElementById('dashboardView').style.display = 'block';
 
-                const usersTab = document.getElementById('tabUsers');
+                const usersTab = document.getElementById('usersTabBtn');
                 if (usersTab) {
                     usersTab.style.display = currentUser.role === 'admin' ? 'inline-block' : 'none';
                 }
@@ -1285,17 +967,15 @@
 
             document.getElementById('tabMilongas').className = `tab-btn ${tab === 'milongas' ? 'active' : ''}`;
             document.getElementById('tabNew').className = `tab-btn ${tab === 'new' ? 'active' : ''}`;
-            const usersTabBtn = document.getElementById('tabUsers');
+            const usersTabBtn = document.getElementById('usersTabBtn');
             if(usersTabBtn && usersTabBtn.style.display !== 'none') {
-                usersTabBtn.className = `tab-btn ${tab === 'users' ? 'active' : ''}`;
+                document.getElementById('tabUsers').className = `tab-btn ${tab === 'users' ? 'active' : ''}`;
             }
 
             if (tab === 'new') {
                 document.getElementById('formTitle').innerText = 'Cargar Nueva Milonga';
                 document.getElementById('milongaForm').reset();
                 document.getElementById('editMilongaId').value = '';
-                document.getElementById('mFlyerBase64').value = '';
-                document.getElementById('flyerPreview').style.display = 'none';
             }
 
             if (tab === 'milongas') {
@@ -1337,11 +1017,11 @@
                         <div class="card-details">
                             <div class="detail-row"><i class="fa-solid fa-graduation-cap"></i> <span>${m.clase || 'Sin clase'}</span></div>
                             <div class="detail-row"><i class="fa-solid fa-music"></i> <span>${m.milonga}</span></div>
-                            <div class="detail-row"><i class="fa-solid fa-image"></i> <span>${m.flyer_url ? 'Con flyer cargado' : 'Sin foto/flyer'}</span></div>
+                            <div class="detail-row"><i class="fa-solid fa-users"></i> <span>Org: ${m.organizador}</span></div>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <span style="font-size: 0.75rem; color: var(--text-muted);">Por: ${m.owner}</span>
+                        <span style="font-size: 0.75rem; color: var(--text-muted);">Creado por: ${m.owner}</span>
                         <div class="action-btns">
                             <button class="btn-action-sm" onclick="editMilonga('${m.id}')" title="Editar"><i class="fa-solid fa-pen"></i></button>
                             <button class="btn-action-sm" onclick="deleteMilonga('${m.id}')" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
@@ -1355,9 +1035,6 @@
             event.preventDefault();
             const id = document.getElementById('editMilongaId').value;
             const milongaId = id || 'm_' + Date.now();
-            const existing = id ? milongas.find(x => x.id === id) : null;
-            const flyerBase64 = document.getElementById('mFlyerBase64').value;
-
             const data = {
                 id: milongaId,
                 nombre: document.getElementById('mNombre').value,
@@ -1371,8 +1048,7 @@
                 precio: document.getElementById('mTipoPrecio').value === 'A la gorra' ? 'A la gorra' : document.getElementById('mPrecio').value,
                 direccion: document.getElementById('mDireccion').value,
                 map_link: document.getElementById('mMapLink').value,
-                flyer_url: flyerBase64 || (existing ? existing.flyer_url : ''),
-                owner: existing ? existing.owner : currentUser.username
+                owner: id ? milongas.find(x => x.id === id).owner : currentUser.username
             };
 
             const { error } = await window.supabaseClient.from('milongas').upsert(data);
@@ -1381,7 +1057,7 @@
                 return;
             }
 
-            alert('Milonga y flyer guardados con éxito.');
+            alert('Milonga guardada con éxito en Supabase.');
             location.reload();
         }
 
@@ -1402,23 +1078,13 @@
             document.getElementById('mDireccion').value = m.direccion;
             document.getElementById('mMapLink').value = m.map_link || m.mapLink;
 
-            const preview = document.getElementById('flyerPreview');
-            if (m.flyer_url) {
-                document.getElementById('mFlyerBase64').value = m.flyer_url;
-                preview.src = m.flyer_url;
-                preview.style.display = 'block';
-            } else {
-                document.getElementById('mFlyerBase64').value = '';
-                preview.style.display = 'none';
-            }
-
             togglePrecioInput();
             document.getElementById('formTitle').innerText = 'Editar Milonga';
             switchAdminTab('new');
         }
 
         async function deleteMilonga(id) {
-            if (confirm('¿Estás seguro de eliminar esta milonga?')) {
+            if (confirm('¿Estás seguro de eliminar esta milonga de Supabase?')) {
                 const { error } = await window.supabaseClient.from('milongas').delete().eq('id', id);
                 if (error) {
                     alert('Error al eliminar: ' + error.message);
@@ -1445,11 +1111,13 @@
         }
 
         function openUserModal() {
-            document.getElementById('userModal').classList.add('active');
+            const modal = document.getElementById('userModal');
+            if(modal) modal.classList.add('active');
         }
 
         function closeUserModal() {
-            document.getElementById('userModal').classList.remove('active');
+            const modal = document.getElementById('userModal');
+            if(modal) modal.classList.remove('active');
         }
 
         async function saveUser(event) {
@@ -1463,7 +1131,8 @@
                 return;
             }
 
-            const { error } = await window.supabaseClient.from('users').insert({ username, pass, role });
+            const newUser = { username, pass, role };
+            const { error } = await window.supabaseClient.from('users').insert(newUser);
             if (error) {
                 alert('Error al crear usuario: ' + error.message);
                 return;
