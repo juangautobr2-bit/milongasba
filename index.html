@@ -63,3 +63,1112 @@
             top: 0;
             z-index: 100;
         }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .brand i {
+            color: var(--accent);
+            font-size: 1.25rem;
+        }
+
+        .brand h1 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn-icon {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .btn-icon:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #ffffff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        main {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            flex: 1;
+        }
+
+        .date-banner {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .date-banner h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .date-banner p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .controls-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        @media(min-width: 768px) {
+            .controls-section {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .days-pills {
+            display: flex;
+            gap: 0.4rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+        }
+
+        .pill-day {
+            background: var(--pill-bg);
+            color: var(--pill-text);
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .pill-day.active {
+            background: var(--accent);
+            color: #ffffff;
+            border-color: var(--accent);
+        }
+
+        .filter-pills {
+            display: flex;
+            gap: 0.4rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+        }
+
+        .pill-filter {
+            background: var(--pill-bg);
+            color: var(--pill-text);
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .pill-filter.active {
+            border-color: var(--accent);
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .search-bar {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 2.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-main);
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        .search-bar input:focus {
+            border-color: var(--accent);
+        }
+
+        .search-bar i {
+            position: absolute;
+            left: 0.85rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .milongas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .milonga-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.25rem;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.75rem;
+        }
+
+        .card-title-group h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.15rem;
+        }
+
+        .card-salon {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .badge-price {
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            background: var(--pill-bg);
+            color: var(--accent);
+            border: 1px solid var(--border-color);
+            white-space: nowrap;
+        }
+
+        .card-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .detail-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .detail-row i {
+            width: 16px;
+            color: var(--accent);
+            text-align: center;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 0.75rem;
+            margin-top: auto;
+        }
+
+        .map-link {
+            font-size: 0.78rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .map-link:hover {
+            text-decoration: underline;
+        }
+
+        .action-btns {
+            display: flex;
+            gap: 0.4rem;
+        }
+
+        .btn-action-sm {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .btn-action-sm:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .empty-state {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(2px);
+            z-index: 1000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 550px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.75rem;
+        }
+
+        .modal-header h3 {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.3rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.6rem 0.75rem;
+            background: var(--bg-main);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-main);
+            font-size: 0.85rem;
+            outline: none;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+        }
+
+        .btn-secondary {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-muted);
+        }
+
+        .admin-nav {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.75rem;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+        }
+
+        .tab-btn.active {
+            background: var(--pill-bg);
+            color: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            background: var(--bg-card);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="brand" onclick="switchView('public')">
+                <i class="fa-solid fa-compact-disc"></i>
+                <h1>Cartelera Milonguera CABA</h1>
+            </a>
+            <div class="nav-actions">
+                <button class="btn-icon" id="themeToggle" onclick="toggleTheme()" title="Cambiar Tema">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="btn-primary" id="authBtn" onclick="openLoginModal()">
+                    <i class="fa-solid fa-user-lock"></i> <span id="authBtnText">Ingresar</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="mainContent">
+        <!-- VISTA PUBLICA -->
+        <div id="publicView">
+            <div class="date-banner">
+                <h2 id="currentBannerDate">HOY DÍA JUEVES 12 DE NOVIEMBRE DE 2026</h2>
+                <p>Seleccioná un día y descubrí la agenda de milongas de Buenos Aires (Sincronizado en Supabase Cloud)</p>
+            </div>
+
+            <div class="controls-section">
+                <div class="days-pills" id="daysPillsContainer">
+                    <!-- Generado dinámicamente -->
+                </div>
+                <div class="filter-pills">
+                    <button class="pill-filter active" onclick="setFilter('tipo', 'todos')">Todas</button>
+                    <button class="pill-filter" onclick="setFilter('tipo', 'A la gorra')">A la gorra</button>
+                    <button class="pill-filter" onclick="setFilter('tipo', 'Con entrada')">Con entrada</button>
+                    <button class="pill-filter" onclick="setFilter('tipo', 'orquesta')">Con Orquesta/Show</button>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Buscar por milonga, salón, organizador, artista u orquesta..." oninput="renderMilongas()">
+            </div>
+
+            <div class="milongas-grid" id="milongasGrid">
+                <!-- Tarjetas de milongas -->
+            </div>
+        </div>
+
+        <!-- VISTA PANEL ADMIN / ORGANIZADOR -->
+        <div id="dashboardView" style="display: none;">
+            <div class="admin-nav">
+                <button class="tab-btn active" id="tabMilongas" onclick="switchAdminTab('milongas')">Mis Milongas / Eventos</button>
+                <button class="tab-btn" id="tabNew" onclick="switchAdminTab('new')">+ Cargar Milonga</button>
+                <button class="tab-btn" id="tabUsers" onclick="switchAdminTab('users')" style="display:none;" id="usersTabBtn">Gestión Usuarios</button>
+                <button class="tab-btn" onclick="logout()" style="margin-left: auto; color: var(--accent);">Cerrar Sesión</button>
+            </div>
+
+            <!-- SECCION MILONGAS -->
+            <div id="sectionMilongas">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3 id="dashboardTitle" style="font-size: 1rem; font-weight: 700;">Gestión de Eventos en Supabase</h3>
+                    <button class="btn-primary" onclick="switchAdminTab('new')"><i class="fa-solid fa-plus"></i> Nueva Milonga</button>
+                </div>
+                <div class="milongas-grid" id="adminMilongasGrid"></div>
+            </div>
+
+            <!-- SECCION CARGAR / EDITAR MILONGA -->
+            <div id="sectionNew" style="display: none;">
+                <div class="modal-card" style="max-width: 100%; box-shadow: none; border: 1px solid var(--border-color);">
+                    <h3 id="formTitle" style="margin-bottom: 1.25rem; font-size: 1rem; font-weight: 700;">Cargar Nueva Milonga</h3>
+                    <form id="milongaForm" onsubmit="saveMilonga(event)">
+                        <input type="hidden" id="editMilongaId">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fa-solid fa-compact-disc"></i> Nombre de la Milonga</label>
+                                <input type="text" id="mNombre" class="form-control" required placeholder="Ej: Milonga Malena">
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fa-solid fa-building"></i> Lugar o Salón</label>
+                                <input type="text" id="mSalon" class="form-control" required placeholder="Ej: Salón Marabú">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fa-solid fa-calendar-day"></i> Día de la Semana</label>
+                                <select id="mDia" class="form-control" required>
+                                    <option value="Lunes">Lunes</option>
+                                    <option value="Martes">Martes</option>
+                                    <option value="Miércoles">Miércoles</option>
+                                    <option value="Jueves">Jueves</option>
+                                    <option value="Viernes">Viernes</option>
+                                    <option value="Sábado">Sábado</option>
+                                    <option value="Domingo">Domingo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fa-solid fa-users"></i> Organizador(es)</label>
+                                <input type="text" id="mOrganizador" class="form-control" required placeholder="Ej: Juan Pérez y María Gómez">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fa-solid fa-graduation-cap"></i> Horario de Clase</label>
+                                <input type="text" id="mClase" class="form-control" placeholder="Ej: 20:30 a 22:00 hs">
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fa-solid fa-music"></i> Horario de Milonga Social</label>
+                                <input type="text" id="mMilonga" class="form-control" required placeholder="Ej: 22:00 a 03:00 hs">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fa-solid fa-drum"></i> Orquesta o Artista en Vivo</label>
+                                <input type="text" id="mArtista" class="form-control" placeholder="Ej: Orquesta Típica Sans Souci / DJ Marcelo">
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fa-solid fa-ticket"></i> Modalidad de Ingreso</label>
+                                <select id="mTipoPrecio" class="form-control" onchange="togglePrecioInput()" required>
+                                    <option value="A la gorra">A la gorra</option>
+                                    <option value="Con entrada">Con entrada</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="grupoPrecio">
+                            <label><i class="fa-solid fa-dollar-sign"></i> Monto / Precio de la Entrada</label>
+                            <input type="text" id="mPrecio" class="form-control" placeholder="Ej: $6.000 / $8.000 con consumición">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fa-solid fa-location-dot"></i> Dirección en CABA</label>
+                                <input type="text" id="mDireccion" class="form-control" required placeholder="Ej: Maipú 365, CABA">
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fa-solid fa-map-location-dot"></i> Link de Google Maps</label>
+                                <input type="url" id="mMapLink" class="form-control" required placeholder="Ej: https://maps.app.goo.gl/...">
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn-secondary" onclick="switchAdminTab('milongas')">Cancelar</button>
+                            <button type="submit" class="btn-primary"><i class="fa-solid fa-floppy-disk"></i> Guardar en Supabase</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- SECCION USUARIOS (SOLO ADMIN GLOBAL) -->
+            <div id="sectionUsers" style="display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3 style="font-size: 1rem; font-weight: 700;">Gestión de Organizadores en Supabase</h3>
+                    <button class="btn-primary" onclick="openUserModal()"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</button>
+                </div>
+                <div id="usersListContainer" style="display: flex; flex-direction: column; gap: 0.75rem;"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- MODAL LOGIN UNIFICADO -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-user-lock"></i> Acceso al Sistema</h3>
+                <button class="btn-action-sm" onclick="closeLoginModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label><i class="fa-solid fa-user"></i> Usuario</label>
+                    <input type="text" id="loginUser" class="form-control" required placeholder="Ingrese su usuario">
+                </div>
+                <div class="form-group">
+                    <label><i class="fa-solid fa-key"></i> Contraseña</label>
+                    <input type="password" id="loginPass" class="form-control" required placeholder="Ingrese su contraseña">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-secondary" onclick="closeLoginModal()">Cancelar</button>
+                    <button type="submit" class="btn-primary">Ingresar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL NUEVO/EDITAR USUARIO -->
+    <div class="modal-overlay" id="userModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="userModalTitle">Crear Organizador / Usuario</h3>
+                <button class="btn-action-sm" onclick="closeUserModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form onsubmit="saveUser(event)">
+                <div class="form-group">
+                    <label>Nombre de Usuario</label>
+                    <input type="text" id="uUsername" class="form-control" required placeholder="Ej: marilu_tango">
+                </div>
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <input type="text" id="uPassword" class="form-control" required placeholder="Ej: clave123">
+                </div>
+                <div class="form-group">
+                    <label>Rol en el Sistema</label>
+                    <select id="uRole" class="form-control">
+                        <option value="organizer">Organizador de Milongas</option>
+                        <option value="admin">Administrador General</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-secondary" onclick="closeUserModal()">Cancelar</button>
+                    <button type="submit" class="btn-primary">Guardar Usuario</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Cartelera Semanal de Milongas CABA • Base de Datos Supabase Cloud</p>
+    </footer>
+
+    <!-- Supabase SDK e Inicialización -->
+    <script type="module">
+        // 1. TUS CREDENCIALES DE SUPABASE
+        const SUPABASE_URL = "https://ccamfdmhzlbekzuzunpn.supabase.co";
+        const SUPABASE_ANON_KEY = "PEGA_AQUI_TU_ANON_PUBLIC_KEY";
+
+        // Inicializar cliente de Supabase
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        window.supabaseClient = supabase;
+
+        window.milongas = [];
+        window.users = [];
+        window.currentUser = JSON.parse(localStorage.getItem('tango_current_user')) || null;
+        window.activeDay = 'Jueves';
+        window.activeFilter = 'todos';
+        window.daysList = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+
+        async function initSupabaseData() {
+            try {
+                // Cargar Milongas desde Supabase
+                const { data: milongasData, error: mError } = await supabase.from('milongas').select('*');
+                if (mError) throw mError;
+                window.milongas = milongasData || [];
+
+                // Cargar Usuarios desde Supabase
+                const { data: usersData, error: uError } = await supabase.from('users').select('*');
+                if (uError) throw uError;
+                window.users = usersData || [];
+
+            } catch (e) {
+                console.error("Error al conectar con Supabase:", e.message);
+            }
+
+            renderDaysPills();
+            renderMilongas();
+            updateAuthUI();
+        }
+
+        window.initSupabaseData = initSupabaseData;
+        window.onload = initSupabaseData;
+    </script>
+
+    <script>
+        // Funciones de la Interfaz y Lógica
+        function toggleTheme() {
+            const current = document.documentElement.className;
+            const next = current === 'light' ? 'dark' : 'light';
+            document.documentElement.className = next;
+            localStorage.setItem('tango_theme', next);
+            updateThemeIcon(next);
+        }
+
+        function updateThemeIcon(theme) {
+            const icon = document.getElementById('themeIcon');
+            if(icon) icon.className = theme === 'light' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+        }
+
+        function renderDaysPills() {
+            const container = document.getElementById('daysPillsContainer');
+            if(!container) return;
+            container.innerHTML = daysList.map(day => `
+                <button class="pill-day ${day === activeDay ? 'active' : ''}" onclick="selectDay('${day}')">${day}</button>
+            `).join('');
+        }
+
+        function selectDay(day) {
+            activeDay = day;
+            renderDaysPills();
+            const banner = document.getElementById('currentBannerDate');
+            if(banner) banner.innerText = `CARTELERA DEL DÍA ${day.toUpperCase()} — 2026`;
+            renderMilongas();
+        }
+
+        function setFilter(category, value) {
+            activeFilter = value;
+            document.querySelectorAll('.filter-pills .pill-filter').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            renderMilongas();
+        }
+
+        function renderMilongas() {
+            const searchInput = document.getElementById('searchInput');
+            const query = searchInput ? searchInput.value.toLowerCase() : '';
+            const grid = document.getElementById('milongasGrid');
+            if(!grid) return;
+
+            let filtered = milongas.filter(m => m.dia === activeDay);
+
+            if (activeFilter === 'A la gorra') {
+                filtered = filtered.filter(m => m.tipo === 'A la gorra');
+            } else if (activeFilter === 'Con entrada') {
+                filtered = filtered.filter(m => m.tipo === 'Con entrada');
+            } else if (activeFilter === 'orquesta') {
+                filtered = filtered.filter(m => m.artista && m.artista.trim() !== '' && m.artista.toLowerCase() !== 'sin artista');
+            }
+
+            if (query) {
+                filtered = filtered.filter(m => 
+                    m.nombre.toLowerCase().includes(query) ||
+                    m.salon.toLowerCase().includes(query) ||
+                    m.organizador.toLowerCase().includes(query) ||
+                    (m.artista && m.artista.toLowerCase().includes(query)) ||
+                    m.direccion.toLowerCase().includes(query)
+                );
+            }
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div class="empty-state"><i class="fa-solid fa-compact-disc fa-spin" style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--accent);"></i><p>No hay milongas programadas para el día ${activeDay} con los filtros seleccionados.</p></div>`;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(m => `
+                <div class="milonga-card">
+                    <div>
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <h3>${m.nombre}</h3>
+                                <div class="card-salon"><i class="fa-solid fa-building"></i> ${m.salon}</div>
+                            </div>
+                            <span class="badge-price">${m.tipo} (${m.precio})</span>
+                        </div>
+                        <div class="card-details">
+                            <div class="detail-row"><i class="fa-solid fa-graduation-cap"></i> <span><strong>Clase:</strong> ${m.clase || 'Sin clase previa'}</span></div>
+                            <div class="detail-row"><i class="fa-solid fa-music"></i> <span><strong>Milonga:</strong> ${m.milonga}</span></div>
+                            ${m.artista ? `<div class="detail-row"><i class="fa-solid fa-drum"></i> <span><strong>Artista/Orquesta:</strong> ${m.artista}</span></div>` : ''}
+                            <div class="detail-row"><i class="fa-solid fa-users"></i> <span><strong>Org:</strong> ${m.organizador}</span></div>
+                            <div class="detail-row"><i class="fa-solid fa-location-dot"></i> <span>${m.direccion}</span></div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="${m.map_link || m.mapLink}" target="_blank" class="map-link"><i class="fa-solid fa-map-location-dot"></i> Ver en Google Maps</a>
+                        <div class="action-btns">
+                            <button class="btn-action-sm" onclick="shareMilonga('${m.id}')" title="Compartir"><i class="fa-solid fa-share-nodes"></i></button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openLoginModal() {
+            if (currentUser) {
+                switchView('dashboard');
+                return;
+            }
+            document.getElementById('loginModal').classList.add('active');
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginModal').classList.remove('active');
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const u = document.getElementById('loginUser').value.trim();
+            const p = document.getElementById('loginPass').value.trim();
+
+            const found = users.find(x => x.username === u && x.pass === p);
+            if (found) {
+                currentUser = found;
+                localStorage.setItem('tango_current_user', JSON.stringify(currentUser));
+                closeLoginModal();
+                updateAuthUI();
+                switchView('dashboard');
+            } else {
+                alert('Usuario o contraseña incorrectos.');
+            }
+        }
+
+        function logout() {
+            currentUser = null;
+            localStorage.removeItem('tango_current_user');
+            updateAuthUI();
+            switchView('public');
+        }
+
+        function updateAuthUI() {
+            const btnText = document.getElementById('authBtnText');
+            if (btnText) {
+                if (currentUser) {
+                    btnText.innerText = `${currentUser.username} (${currentUser.role === 'admin' ? 'Admin' : 'Org'})`;
+                } else {
+                    btnText.innerText = 'Ingresar';
+                }
+            }
+        }
+
+        function switchView(view) {
+            if (view === 'public') {
+                document.getElementById('publicView').style.display = 'block';
+                document.getElementById('dashboardView').style.display = 'none';
+                renderMilongas();
+            } else {
+                if (!currentUser) {
+                    openLoginModal();
+                    return;
+                }
+                document.getElementById('publicView').style.display = 'none';
+                document.getElementById('dashboardView').style.display = 'block';
+
+                const usersTab = document.getElementById('usersTabBtn');
+                if (usersTab) {
+                    usersTab.style.display = currentUser.role === 'admin' ? 'inline-block' : 'none';
+                }
+                switchAdminTab('milongas');
+            }
+        }
+
+        function switchAdminTab(tab) {
+            document.getElementById('sectionMilongas').style.display = tab === 'milongas' ? 'block' : 'none';
+            document.getElementById('sectionNew').style.display = tab === 'new' ? 'block' : 'none';
+            document.getElementById('sectionUsers').style.display = tab === 'users' ? 'block' : 'none';
+
+            document.getElementById('tabMilongas').className = `tab-btn ${tab === 'milongas' ? 'active' : ''}`;
+            document.getElementById('tabNew').className = `tab-btn ${tab === 'new' ? 'active' : ''}`;
+            const usersTabBtn = document.getElementById('usersTabBtn');
+            if(usersTabBtn && usersTabBtn.style.display !== 'none') {
+                document.getElementById('tabUsers').className = `tab-btn ${tab === 'users' ? 'active' : ''}`;
+            }
+
+            if (tab === 'new') {
+                document.getElementById('formTitle').innerText = 'Cargar Nueva Milonga';
+                document.getElementById('milongaForm').reset();
+                document.getElementById('editMilongaId').value = '';
+            }
+
+            if (tab === 'milongas') {
+                renderAdminMilongas();
+            } else if (tab === 'users') {
+                renderUsersList();
+            }
+        }
+
+        function togglePrecioInput() {
+            const tipo = document.getElementById('mTipoPrecio').value;
+            const grupo = document.getElementById('grupoPrecio');
+            if(grupo) grupo.style.display = tipo === 'A la gorra' ? 'none' : 'block';
+        }
+
+        function renderAdminMilongas() {
+            const grid = document.getElementById('adminMilongasGrid');
+            if(!grid) return;
+            let list = milongas;
+            if (currentUser && currentUser.role !== 'admin') {
+                list = milongas.filter(m => m.owner === currentUser.username);
+            }
+
+            if (list.length === 0) {
+                grid.innerHTML = `<div class="empty-state"><p>No has cargado ninguna milonga todavía.</p></div>`;
+                return;
+            }
+
+            grid.innerHTML = list.map(m => `
+                <div class="milonga-card">
+                    <div>
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <h3>${m.nombre} (${m.dia})</h3>
+                                <div class="card-salon"><i class="fa-solid fa-building"></i> ${m.salon}</div>
+                            </div>
+                            <span class="badge-price">${m.tipo}</span>
+                        </div>
+                        <div class="card-details">
+                            <div class="detail-row"><i class="fa-solid fa-graduation-cap"></i> <span>${m.clase || 'Sin clase'}</span></div>
+                            <div class="detail-row"><i class="fa-solid fa-music"></i> <span>${m.milonga}</span></div>
+                            <div class="detail-row"><i class="fa-solid fa-users"></i> <span>Org: ${m.organizador}</span></div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span style="font-size: 0.75rem; color: var(--text-muted);">Creado por: ${m.owner}</span>
+                        <div class="action-btns">
+                            <button class="btn-action-sm" onclick="editMilonga('${m.id}')" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                            <button class="btn-action-sm" onclick="deleteMilonga('${m.id}')" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        async function saveMilonga(event) {
+            event.preventDefault();
+            const id = document.getElementById('editMilongaId').value;
+            const milongaId = id || 'm_' + Date.now();
+            const data = {
+                id: milongaId,
+                nombre: document.getElementById('mNombre').value,
+                salon: document.getElementById('mSalon').value,
+                dia: document.getElementById('mDia').value,
+                organizador: document.getElementById('mOrganizador').value,
+                clase: document.getElementById('mClase').value,
+                milonga: document.getElementById('mMilonga').value,
+                artista: document.getElementById('mArtista').value,
+                tipo: document.getElementById('mTipoPrecio').value,
+                precio: document.getElementById('mTipoPrecio').value === 'A la gorra' ? 'A la gorra' : document.getElementById('mPrecio').value,
+                direccion: document.getElementById('mDireccion').value,
+                map_link: document.getElementById('mMapLink').value,
+                owner: id ? milongas.find(x => x.id === id).owner : currentUser.username
+            };
+
+            const { error } = await window.supabaseClient.from('milongas').upsert(data);
+            if (error) {
+                alert('Error al guardar en Supabase: ' + error.message);
+                return;
+            }
+
+            alert('Milonga guardada con éxito en Supabase.');
+            location.reload();
+        }
+
+        function editMilonga(id) {
+            const m = milongas.find(x => x.id === id);
+            if (!m) return;
+
+            document.getElementById('editMilongaId').value = m.id;
+            document.getElementById('mNombre').value = m.nombre;
+            document.getElementById('mSalon').value = m.salon;
+            document.getElementById('mDia').value = m.dia;
+            document.getElementById('mOrganizador').value = m.organizador;
+            document.getElementById('mClase').value = m.clase;
+            document.getElementById('mMilonga').value = m.milonga;
+            document.getElementById('mArtista').value = m.artista || '';
+            document.getElementById('mTipoPrecio').value = m.tipo;
+            document.getElementById('mPrecio').value = m.precio;
+            document.getElementById('mDireccion').value = m.direccion;
+            document.getElementById('mMapLink').value = m.map_link || m.mapLink;
+
+            togglePrecioInput();
+            document.getElementById('formTitle').innerText = 'Editar Milonga';
+            switchAdminTab('new');
+        }
+
+        async function deleteMilonga(id) {
+            if (confirm('¿Estás seguro de eliminar esta milonga de Supabase?')) {
+                const { error } = await window.supabaseClient.from('milongas').delete().eq('id', id);
+                if (error) {
+                    alert('Error al eliminar: ' + error.message);
+                    return;
+                }
+                location.reload();
+            }
+        }
+
+        function renderUsersList() {
+            const container = document.getElementById('usersListContainer');
+            if(!container) return;
+            container.innerHTML = users.map(u => `
+                <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 1rem; border-radius: 6px; display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <strong>${u.username}</strong> <span style="font-size: 0.75rem; color: var(--accent);">(${u.role})</span>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">Pass: ${u.pass}</div>
+                    </div>
+                    <div class="action-btns">
+                        <button class="btn-action-sm" onclick="deleteUser('${u.username}')" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openUserModal() {
+            const modal = document.getElementById('userModal');
+            if(modal) modal.classList.add('active');
+        }
+
+        function closeUserModal() {
+            const modal = document.getElementById('userModal');
+            if(modal) modal.classList.remove('active');
+        }
+
+        async function saveUser(event) {
+            event.preventDefault();
+            const username = document.getElementById('uUsername').value.trim();
+            const pass = document.getElementById('uPassword').value.trim();
+            const role = document.getElementById('uRole').value;
+
+            if (users.some(x => x.username === username)) {
+                alert('El usuario ya existe.');
+                return;
+            }
+
+            const newUser = { username, pass, role };
+            const { error } = await window.supabaseClient.from('users').insert(newUser);
+            if (error) {
+                alert('Error al crear usuario: ' + error.message);
+                return;
+            }
+
+            closeUserModal();
+            location.reload();
+        }
+
+        async function deleteUser(username) {
+            if (username === 'admin') {
+                alert('No se puede eliminar al administrador principal.');
+                return;
+            }
+            if (confirm(`¿Eliminar usuario ${username}?`)) {
+                const { error } = await window.supabaseClient.from('users').delete().eq('username', username);
+                if (error) {
+                    alert('Error al eliminar usuario: ' + error.message);
+                    return;
+                }
+                location.reload();
+            }
+        }
+
+        function shareMilonga(id) {
+            const m = milongas.find(x => x.id === id);
+            if (!m) return;
+            const text = `🕺 Milonga: ${m.nombre}\n📍 Salón: ${m.salon} (${m.direccion})\n📅 Día: ${m.dia}\n🎓 Clase: ${m.clase || 'Sin clase'}\n💃 Milonga: ${m.milonga}\n💵 Ingreso: ${m.tipo} (${m.precio})\n🗺️ Mapa: ${m.map_link || m.mapLink}`;
+            
+            if (navigator.share) {
+                navigator.share({ title: m.nombre, text: text }).catch(() => {});
+            } else {
+                navigator.clipboard.writeText(text);
+                alert('¡Información copiada al portapapeles para compartir por WhatsApp!');
+            }
+        }
+    </script>
+</body>
+</html>
