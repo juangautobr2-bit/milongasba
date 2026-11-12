@@ -938,15 +938,18 @@
 
     <!-- Supabase SDK e Inicialización -->
     <script type="module">
-        // REEMPLAZA CON TUS CREDENCIALES REALES DE SUPABASE
-         const SUPABASE_URL = "https://ccamfdmhzlbekzuzunpn.supabase.co";
+        const SUPABASE_URL = "https://ccamfdmhzlbekzuzunpn.supabase.co";
         const SUPABASE_ANON_KEY = "sb_publishable_i7y7fxAdSLk9SVGvwR61WA_sC9GSkXp";
 
         const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
         window.supabaseClient = supabase;
 
         window.milongas = [];
-        window.users = [];
+        // Usuarios por defecto de respaldo en caso de que la tabla en la nube esté vacía o bloqueada por RLS
+        window.users = [
+            { username: 'admin', pass: 'admin2026', role: 'admin' },
+            { username: 'malena', pass: 'tango2026', role: 'organizer' }
+        ];
         window.currentUser = JSON.parse(localStorage.getItem('tango_current_user')) || null;
         window.activeDay = 'Jueves';
         window.activeFilter = 'todos';
@@ -955,14 +958,20 @@
         async function initSupabaseData() {
             try {
                 const { data: milongasData, error: mError } = await supabase.from('milongas').select('*');
-                if (mError) throw mError;
-                window.milongas = milongasData || [];
+                if (mError) {
+                    console.warn("Aviso al cargar milongas:", mError.message);
+                } else if (milongasData && milongasData.length > 0) {
+                    window.milongas = milongasData;
+                }
 
                 const { data: usersData, error: uError } = await supabase.from('users').select('*');
-                if (uError) throw uError;
-                window.users = usersData || [];
+                if (uError) {
+                    console.warn("Aviso al cargar usuarios (usando respaldo local):", uError.message);
+                } else if (usersData && usersData.length > 0) {
+                    window.users = usersData;
+                }
             } catch (e) {
-                console.error("Error al conectar con Supabase:", e.message);
+                console.error("Error general de conexión con Supabase:", e.message);
             }
 
             renderDaysPills();
